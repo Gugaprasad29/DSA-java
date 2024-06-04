@@ -5,7 +5,7 @@ public class Main{
         int[] arr = {9,2,7,6,8,4,3,5,1};
         bubblesort(arr);
         for(int i: arr){
-            System.out.print(i);
+            System.out.print(i + " ");
         }
     }
     public static void bubblesort(int[] arr){
