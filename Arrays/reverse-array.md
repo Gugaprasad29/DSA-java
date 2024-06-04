@@ -55,3 +55,25 @@ public class Reverse_array{
     }
 }
 ```
+**Array reverse with recursion**
+```
+public class array{
+    public static void revarr(int[] arr, int start, int end){
+        int temp;
+        if(start>=end)
+            return;
+        else
+            temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            revarr(arr, start+1, end-1);
+        System.out.print("Reverse array: ");
+        for(int i=0;i<5;i++)
+            System.out.print(arr[i] + " ");
+    }
+    public static void main(String[] args){
+       int[] org_arr = {1,2,3,4,5};
+       revarr(org_arr, 0, 4);
+    }
+}
+```
