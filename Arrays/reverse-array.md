@@ -40,3 +40,18 @@ public class array {
     }
 }
 ```
+**Array reverse with in-built methods**
+```
+import java.util.*;
+
+public class array{
+    public static void main(String[] args){
+        int[] oarr = {1,2,3,4,5};
+        int[] rarr = new int[oarr.length];
+        for(int i=0;i<oarr.length;i++){
+            rarr[i] = oarr[oarr.length-i-1];
+        }
+        System.out.println(Arrays.toString(rarr));
+    }
+}
+```
