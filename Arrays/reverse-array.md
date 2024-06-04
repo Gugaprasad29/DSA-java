@@ -17,3 +17,26 @@ public class array {
     }
 }
 ```
+**Array reverse with loop**
+```
+public class array {
+    public static void revarr(int[] arr){
+        int temp, start=0, end=4;
+        while(start<end){
+            temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        System.out.print("Reverse Array: ");
+        for(int i=0;i<5;i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void main(String[] args) {
+        int[] oarr = {1,2,3,4,5};
+        revarr(oarr);
+    }
+}
+```
