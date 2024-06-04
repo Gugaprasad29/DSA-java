@@ -17,7 +17,7 @@ public class Reverse_array {
     }
 }
 ```
-**Array reverse with loop**
+**Array reverse with Loops**
 ```
 public class Reverse_array {
     public static void revarr(int[] arr){
@@ -40,7 +40,7 @@ public class Reverse_array {
     }
 }
 ```
-**Array reverse with in-built methods**
+**Array reverse with In-built methods**
 ```
 import java.util.*;
 
@@ -55,7 +55,7 @@ public class Reverse_array{
     }
 }
 ```
-**Array reverse with recursion**
+**Array reverse with Recursion**
 ```
 public class array{
     public static void revarr(int[] arr, int start, int end){
@@ -74,6 +74,27 @@ public class array{
     public static void main(String[] args){
        int[] org_arr = {1,2,3,4,5};
        revarr(org_arr, 0, 4);
+    }
+}
+```
+**Array reverse with Stack**
+```
+import java.util.Stack;
+
+public class array{
+    public static void revarr(int[] arr){
+        Stack<Integer> stack = new Stack<>();
+        for(int i:arr)
+            stack.push(i);
+        for(int i=0;i<arr.length;i++)
+            arr[i] = stack.pop();
+    }
+    public static void main(String[] args){
+        int[] arr = {1,2,3,4,5};
+        revarr(arr);
+        System.out.print("Reverse array: ");
+        for(int i:arr)
+            System.out.print(i + " ");
     }
 }
 ```
