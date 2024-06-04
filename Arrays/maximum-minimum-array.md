@@ -27,3 +27,17 @@ public class Min_Max{
     }
 }
 ```
+**Minimum and Maximum in array using Sort**
+```
+import java.util.*;
+
+public class Min_Max{
+    public static void main(String[] args){
+        int[] arr = {9,42,23,49,57,40};
+        int n = arr.length;
+        Arrays.sort(arr);
+        System.out.println("Maximum value in array: " + arr[0]);
+        System.out.println("Minimum value in array: " + arr[n-1]);
+    }
+}
+```
