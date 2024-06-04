@@ -77,3 +77,41 @@ public class Min_Max{
     }
 }
 ```
+**Minimum and Maximum in array using Tournament method**
+```
+import java.util.*;
+
+public class Min_Max{
+    public static int[] tournament(int[] arr, int low, int high){
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int mid;
+        
+        if(low==high){
+            min = arr[low];
+            max = arr[low];
+            return new int[]{min, max};
+        } 
+        if(high==low+1){
+            min = Math.min(arr[low], arr[high]);
+            max = Math.max(arr[low], arr[high]);
+            return new int[]{min, max};
+        }
+        mid = (low+high)/2;
+        int[] mml = tournament(arr, low, mid);
+        int[] mmr = tournament(arr, mid+1, high);
+        
+        min = Math.min(mml[0],mmr[0]);
+        max = Math.max(mml[1],mmr[1]);
+        
+        return new int[]{min,max};
+    }
+    public static void main(String[] args){
+        int[] arr = {9,42,23,49,57,40};
+        int n = arr.length;
+        int[] minmax = tournament(arr, 0, n-1);
+        System.out.println("Minimum value in array: " + minmax[0]);
+        System.out.println("Maximum value in array: " + minmax[1]);
+    }
+}
+```
