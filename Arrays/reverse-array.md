@@ -1,25 +1,25 @@
 **Array reverse with extra array**
 ```
-public class array {
+public class Reverse_array {
     public static void revarr(int[] arr){
-        int[] rarr = new int[arr.length];
+        int[] rev_arr = new int[arr.length];
         for(int i=0;i<arr.length;i++){
-            rarr[i] = arr[arr.length-i-1];
+            rev_arr[i] = arr[arr.length-i-1];
         }
         System.out.print("Reverse Array: ");
-        for(int i:rarr){
+        for(int i:rev_arr){
             System.out.print(i + " ");
         }
     }
     public static void main(String[] args) {
-        int[] oarr = {1,2,3,4,5};
-        revarr(oarr);
+        int[] org_arr = {1,2,3,4,5};
+        revarr(org_arr);
     }
 }
 ```
 **Array reverse with loop**
 ```
-public class array {
+public class Reverse_array {
     public static void revarr(int[] arr){
         int temp, start=0, end=4;
         while(start<end){
@@ -35,8 +35,8 @@ public class array {
         }
     }
     public static void main(String[] args) {
-        int[] oarr = {1,2,3,4,5};
-        revarr(oarr);
+        int[] org_arr = {1,2,3,4,5};
+        revarr(org_arr);
     }
 }
 ```
@@ -44,14 +44,14 @@ public class array {
 ```
 import java.util.*;
 
-public class array{
+public class Reverse_array{
     public static void main(String[] args){
-        int[] oarr = {1,2,3,4,5};
-        int[] rarr = new int[oarr.length];
-        for(int i=0;i<oarr.length;i++){
-            rarr[i] = oarr[oarr.length-i-1];
+        int[] org_arr = {1,2,3,4,5};
+        int[] rev_arr = new int[org_arr.length];
+        for(int i=0;i<org_arr.length;i++){
+            rarr[i] = org_arr[org_arr.length-i-1];
         }
-        System.out.println(Arrays.toString(rarr));
+        System.out.println(Arrays.toString(rev_arr));
     }
 }
 ```
