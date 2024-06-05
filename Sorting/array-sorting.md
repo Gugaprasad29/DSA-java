@@ -68,3 +68,62 @@ public class Main{
     }
 }
 ```
+**Merge Sort**
+```
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {9,2,7,6,8,4,3,5,1};
+        mergeSort(arr);
+        for(int i=0;i<arr.length;i++)
+            System.out.print(arr[i] + " ");
+    }
+    public static void mergeSort(int[] arr){
+        int n = arr.length;
+        if(n<=1)
+            return;
+        int mid = n/2;
+        int[] leftArray = new int[mid];
+        int[] rightArray = new int[n-mid];
+        int j=0;
+        for(int i=0;i<arr.length;i++){
+            if(i<mid){
+                leftArray[i] = arr[i];
+            }
+            else{
+                rightArray[j] = arr[i];
+                j++;
+            }
+        }
+        mergeSort(leftArray);
+        mergeSort(rightArray);
+        merge(leftArray, rightArray, arr);
+    }
+    public static void merge(int[] leftArray, int[] rightArray, int[] arr){
+        int leftSize = arr.length/2;
+        int rightSize = arr.length-leftSize;
+        int l=0, r=0, i=0;
+        while(l<leftSize && r<rightSize){
+            if(leftArray[l]<rightArray[r]){
+                arr[i] = leftArray[l];
+                i++;
+                l++;
+            }
+            else{
+                arr[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+        while(l<leftSize){
+            arr[i] = leftArray[l];
+            i++;
+            l++;
+        }
+        while(r<rightSize){
+            arr[i] = rightArray[r];
+            i++;
+            r++;
+        }
+    }
+}
+```
