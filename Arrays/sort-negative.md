@@ -23,3 +23,30 @@ public class Main {
     }
 }
 ```
+**Two pointer approach**
+```
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {0,2,7,-6,8,-4,3,5,-1};
+        int n = arr.length;
+        two_pointer(arr, 0, n-1);
+        for (int i=0;i<=n-1;i++)
+            System.out.print(arr[i] + " ");
+    }
+    public static void two_pointer(int[] arr, int left, int right){
+        while(left<right){
+            if(arr[left]<0 && arr[right]<0)
+                left++;
+            else if(arr[left]>=0 && arr[right]<0){
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+            else if (arr[left]>=0 && arr[right]>=0)
+                right--;
+        }
+    }
+}
+```
