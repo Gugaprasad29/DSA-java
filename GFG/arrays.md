@@ -24,3 +24,19 @@ class Solution{
     }
 }
 ```
+**Given an array, rotate the array by one position in clock-wise direction.**
+```
+class Compute {
+    
+    public void rotate(int arr[], int n)
+    {
+        int temp = arr[n-1];
+        int i = n-2;
+        while(i>=0){
+            arr[i+1] = arr[i];
+            i--;
+        }
+        arr[0] = temp;
+    }
+}
+```
