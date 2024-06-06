@@ -26,8 +26,7 @@ class Solution{
 ```
 **Given an array, rotate the array by one position in clock-wise direction.**
 ```
-class Compute {
-    
+class Compute { 
     public void rotate(int arr[], int n)
     {
         int temp = arr[n-1];
@@ -38,5 +37,23 @@ class Compute {
         }
         arr[0] = temp;
     }
+}
+```
+**Kadane's Algorithm**
+**Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.**
+```
+class Solution{
+    long maxSubarraySum(int arr[], int n){
+        long max = Integer.MIN_VALUE;
+        long sum = 0;
+        for(int i=0;i<n;i++){
+                sum+=arr[i];
+                if(sum>max)
+                    max = sum;
+                if(sum<0)
+                    sum = 0;
+        }
+        return max;
+    } 
 }
 ```
