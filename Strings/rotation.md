@@ -1,4 +1,4 @@
-**Navie Approach**
+**Naive Approach**
 ```
 import java.util.*;
 
