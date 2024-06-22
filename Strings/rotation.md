@@ -74,3 +74,25 @@ class Main{
     }
 }
 ```
+**Efficient Approach**
+```
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        String s1 = "abcd";
+        String s2 = "cdab";
+        if(s1.length()!=s2.length())
+            System.out.println("S2 is not a rotation S1");
+        else{
+            if(rotation(s1, s2))
+                System.out.println("Rotate");
+            else
+                System.out.println("Not rotate");
+        }
+    }
+    public static boolean rotation(String s1, String s2){
+        return ((s1+s1).indexOf(s2)!=-1);
+    }
+}
+```
