@@ -1,4 +1,4 @@
-**Tortise and Air alogorithm or Slow and fast pointer**
+**Tortoise and Air alogorithm or Slow and fast pointer**
 ```
 class Solution {
     public static boolean detectLoop(Node head){
