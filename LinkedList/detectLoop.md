@@ -1,7 +1,6 @@
 **Tortise and Air alogorithm or Slow and fast pointer**
 ```
 class Solution {
-    //Function to check if the linked list has a loop.
     public static boolean detectLoop(Node head){
         Node slow = head;
         Node fast = head;
