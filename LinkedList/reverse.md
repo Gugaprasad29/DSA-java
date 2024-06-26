@@ -1,3 +1,35 @@
+**Reverse using Iterative method**
+```
+class Solution{
+    Node reverseList(Node head){
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+        return head;
+    }
+}
+```
+**Reverse using Recursive method**
+```
+class Solution{
+    Node reverseList(Node head){
+        if (head == null || head.next == null)
+            return head;
+        Node curr = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return curr;
+    }
+}
+
+```
 **Reverse in Group**
 ```
 class Solution
