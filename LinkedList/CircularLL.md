@@ -1,4 +1,4 @@
-** Check if LL is Circular**
+**Check if LL is Circular**
 ```
 class Solution{
     boolean isCircular(Node head){
