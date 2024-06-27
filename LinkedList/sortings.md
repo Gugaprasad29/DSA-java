@@ -40,3 +40,55 @@ class Solution{
     }
 }
 ```
+**QuickSort in LinkedList**
+```
+class Solution{
+    public static Node quickSort(Node node){
+        if (node == null || node.next == null)
+            return node;
+        Node last = getLastNode(node);
+        return Sort(node, last);
+    }
+    static Node getLastNode(Node node) {
+        while (node != null && node.next != null) {
+            node = node.next;
+        }
+        return node;
+    }
+    static Node Sort(Node node, Node last){
+        if(node!=last && node!=null && last!=null && node!=last.next){
+            Node pivot = partition(node, last);
+            Node newHead = Sort(node, getPreviousNode(node, pivot));
+            Node newTail = Sort(pivot.next, last);
+            return newHead;
+        }
+        return node;
+    }
+    static Node getPreviousNode(Node low, Node target){
+        Node prev = null;
+        while (low != target) {
+            prev = low;
+            low = low.next;
+        }
+        return prev;
+    }
+    static Node partition(Node low, Node high){
+        int pivot = high.data;
+        Node i = low, j = low;
+
+        while (j != high) {
+            if (j.data < pivot) {
+                int temp = i.data;
+                i.data = j.data;
+                j.data = temp;
+                i = i.next;
+            }
+            j = j.next;
+        }
+        int temp = i.data;
+        i.data = high.data;
+        high.data = temp;
+        return i;
+    }
+}
+```
