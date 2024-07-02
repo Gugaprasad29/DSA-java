@@ -98,7 +98,7 @@ public class array{
     }
 }
 ```
-** Reverse Sub Array**
+**Reverse Sub Array**
 ```
 class Solution {
     void reverseSubArray(int arr[], int n, int l, int r) {
