@@ -98,3 +98,19 @@ public class array{
     }
 }
 ```
+** Reverse Sub Array**
+```
+class Solution {
+    void reverseSubArray(int arr[], int n, int l, int r) {
+        int i = l-1;
+        int j = r-1;
+        while(i<=j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+    }
+}
+```
